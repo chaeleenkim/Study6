@@ -1,12 +1,12 @@
 package com.cl.s4;
 //추상클래스
-public abstract class Animal {
+public class Animal {
 	
 	private String name;
 	private int age;
 	
 	//동물마다 다른 소리 - 추상메서드로 오버라이딩 시킴
-	public abstract void sound();
+	public void sound() {};
 
 
 	//setter, getter

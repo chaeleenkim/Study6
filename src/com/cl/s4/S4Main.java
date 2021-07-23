@@ -47,10 +47,21 @@ public class S4Main {
 		//호랑이 타입에 넣을 수 없다
 		Animal a = animals[1];
 		
+		tiger = (Tiger)a;
 		
 		//instanceof A: A입니까? 
-		System.out.println(a instanceof Tiger); //falses
-
+		System.out.println(a instanceof Tiger); //false
+		
+		System.out.println("============================================");
+		Tiger t2 = new Tiger();
+		Animal a2 = t2;
+		
+		//에러,  java.lang.ClassCastException
+		Animal animal2 = new Animal(); //만들때부터 animal 타입, tiger 타입 아니다
+		Tiger tiger2 = (Tiger) animal2;
+		tiger2.sound();
+		tiger2.wash();
+		//형변환이 가능할려면 tiger형태의 객체가 만들어져야 함
 
 //		a.sound();
 //		//에러, 호랑이가 아닐 수 있으면 호랑이 행동 시킬 수 없다 
